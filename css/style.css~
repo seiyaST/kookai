@@ -75,7 +75,8 @@ body {
 	font-style: normal;
 	-webkit-text-size-adjust: none;
 	background: var(--primary-color);		/*背景色。css冒頭で指定しているprimary-colorを読み込みます*/
-	color: var(--primary-inverse-color);	/*文字色。css冒頭で指定しているprimary-inverse-colorを読み込みます*/
+	/*color: var(--primary-inverse-color);*/	/*文字色。css冒頭で指定しているprimary-inverse-colorを読み込みます*/
+	color: var(--text-color);	/*文字色。css冒頭で指定しているprimary-inverse-colorを読み込みます*/
 	line-height: 3;		/*行間*/
 	animation: opa1 0.2s 0.5s both;
 }
@@ -190,6 +191,9 @@ header address {
 /*トップページのメイン画像
 ---------------------------------------------------------------------------*/
 #mainimg {
+    max-width: 1300px;   /* 好みで 1000〜1400px */
+    margin-left: auto;
+    margin-right: auto;
 	margin-bottom: var(--global-space);	/*下に空けるスペース。css冒頭で指定しているglobal-spaceを読み込みます。*/
 }
 
@@ -380,6 +384,14 @@ footer {
 	margin: 0;	
 }
 
+.list-normal p.expertise {
+  padding-top: 2em;
+}
+
+
+.list-normal p.expertise-spacer {
+  height: 1.5em;
+}
 
 /*FAQ
 ---------------------------------------------------------------------------*/
@@ -484,3 +496,38 @@ footer {
 	.pc {display: block;}
 
 	}/*追加指定ここまで*/
+
+
+    @media screen and (max-width: 900px) {
+
+    #contents {
+        flex-direction: column;
+    }
+
+    #menubar {
+        width: 100%;
+        order: 0;
+    }
+
+    }
+
+@media screen and (max-width: 900px) {
+    .list-normal .list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .list-normal figure,
+    .list-normal .text {
+        max-width: 100%;
+    }
+}
+
+.expertise-list {
+  margin-top: 0em;
+  list-style: disc;
+  list-style-position: inside;
+  margin: 1.2em 0;
+  padding-left: 0;
+}
+
+
