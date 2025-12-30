@@ -460,7 +460,7 @@ footer {
 
 /* 英語版のfounderの隙間調整*/
 .founder-title {
-    letter-spacing: normal;   /* タイトル全体の雰囲気は維持 */
+    letter-spacing: 0.1em;   /* タイトル全体の雰囲気は維持 */
 }
 
 .founder-title .gap {
